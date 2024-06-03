@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap");
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Be Vietnam Pro", sans-serif;
+  }
+
+  .container {
+    position: relative;
+    width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 30px;  
+  }
+  
+  .container .card {
+    position: relative;
+    width: 600px;
+    height: 430px;  
+    background-color: #fff;
+    margin: 30px 10px;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    transition: 0.3s ease-in-out;
+    border-radius: 15px;
+  }
+  
+  .container .card:hover {
+    height: 600px;    
+  }
+  
+  .container .card .image {
+    position: relative;
+    width: 520px;
+    height: auto;
+    top: -40%;
+    left: auto;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .container .card .image img {
+    max-width: 100%;
+    border-radius: 15px;
+  }
+  
+  .container .card .content {
+    position: relative;
+    top: -280px;
+    padding: 20px 30px;
+    color: #111;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+  }
+  .sub-heading{
+    font-size: xx-large;
+    margin-top: 100px;
+    color: #4e45d5;
+  }
+  .container .card:hover .content {
+    margin-top: 10px;
+    display: block;
+    opacity: 1;
+    transition-delay: 0.2s;
+  }
+  .container .card .content p {
+    display: hidden;
+    opacity: 0;
+  }
+  .container .card .content h3 {
+    display: hidden;
+    opacity: 0;
+  }
+  .container .card:hover .content p,
+  .container .card:hover .content h3 {
+    display:block;
+    opacity: 1;
+    transition-delay: 0.2s;
+  }
+  
+  .Serial-No-0, .Serial-No-1{
+    position: absolute;
+    font-size: 3rem;
+    font-style: bold;
+    color: #4e45d5;
+    font-weight: 800;
+    line-height: 50px;
+  }
+
+  .Serial-No-0{
+    top: 20px;
+    right: -200px;
+  }
+  .Serial-No-1{
+    top: 20px;
+    left: -200px;
+  }
+  
+  @media screen and (max-width:1100px) {
+    .Serial-No-0, .Serial-No-1{
+      display: none;
+    }
+  }
+
+  @media screen and (max-width:800px) {
+    
+    .container {
+      position: relative;
+      width: 1100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 30px;  
+    }
+    
+    .container .card {
+      position: relative;
+      width: 300px;
+      height: 215px;  
+      background-color: #fff;
+      margin: 30px 10px;
+      padding: 20px 15px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+      transition: 0.3s ease-in-out;
+      border-radius: 15px;
+    }
+    .container .card .content {
+      position: relative;
+      top: -240px;
+      padding: 20px 30px;
+      color: #111;
+      text-align: center;
+      transition: 0.3s ease-in-out;
+    }
+    .sub-heading{
+      font-size:medium;
+      margin-top: 170px;
+      color: #4e45d5;
+    }
+    .container .card:hover {
+      height: 215px;    
+    }
+    .container .card:hover .content {
+      /* margin-top: 40px; */
+      display: block;
+      opacity: 1;
+      transition-delay: 0.2s;
+    }
+    .container .card .image {
+      position: relative;
+      width: 260px;
+      height: 260px;
+      top: -40%;
+      left: auto;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    
+    .container .card .image img {
+      max-width: 100%;
+      border-radius: 15px;
+    }
+    
+    .container .card:hover .content p,
+    .container .card:hover .content h3 {
+      display:none;
+      opacity: 0;
+      transition-delay: 0.2s;
+    }
+  }

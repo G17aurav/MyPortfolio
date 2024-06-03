@@ -1,0 +1,6 @@
+#main-content {
+    height: 100vh; /* Adjust the height as needed */
+    /* overflow-y: scroll; */
+    scroll-behavior: smooth;
+  }
+  

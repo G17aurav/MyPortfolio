@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700'); 
+/* Color variables */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --white: #fff;
+  --grey: #ccc;
+  --dark_grey: #555;
+  --blue: #4f6fad;
+  --pink: #ee9cb4;
+}
+
+/* Mixins */
+/* .btn {
+  font-size: 17px;
+  display: inline-block;
+  padding: 0.74em 1.5em;
+  margin: 1.5em 0 0;
+  color: var(--white);
+  border-width: 0 0 0 0;
+  border-bottom: 5px solid;
+  text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
+} */
+
+/* .btn-submit {
+  background-color: var(--blue);
+  border-bottom-color: darken(var(--blue), 15%);
+} */
+.btn{
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  padding: .75em 1.5em;
+  /* background-color: #4f6fad; */
+  color: var(--dark_grey);
+  border: 1px solid var(--grey);
+  transition: all 0.5s ease-in;
+  border-radius: 8px;
+  box-shadow: 1px 2px 3px black;
+}
+.btn:hover{
+  border: 1px solid white;
+  cursor: pointer;
+  color: #fff;
+  background-color:rgb(16, 61, 244,0.5);
+  letter-spacing: 1px;
+  outline:1px solid #5048f0;
+  outline-offset: 4px;
+  box-shadow: none;
+}
+
+
+/* Global styles */
+body {
+  background-color: lighten(var(--grey), 10%);
+  font-size: 100%;
+  font-family: 'Lato', sans-serif;
+}
+
+div,
+textarea,
+input {
+  box-sizing: border-box;
+}
+.contact-heading{
+  text-align: center;
+  padding-top: 2rem;
+  font-size: 3rem;
+  font-style: bold;
+  color: #4e45d5;
+  font-weight: 800;
+  line-height: 50px;
+  margin-bottom: 20px;
+}
+.container1 {
+  width: 510px;
+  margin:80px auto 200px;
+  background-color: var(--white);
+  border: 1px solid lighten(var(--grey), 1%);
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
+  box-shadow: rgba(16, 61, 244, 0.4) 5px 5px, rgba(16,61,244, 0.3) 10px 10px, rgba(16,61,244, 0.2) 15px 15px, rgba(16,61,244, 0.1) 20px 20px, rgba(16,61,244, 0.05) 25px 25px;
+}
+.row {
+  width: 100%;
+  margin: 0 0 1em 0;
+  padding: 0 2.5em;
+}
+
+.row.header {
+  padding: 1.5em 2.5em;
+  border-bottom: 1px solid var(--grey);
+  background: url('https://images2.imgbox.com/a5/2e/m3lRbCCA_o.jpg') left -80px;
+  color: var(--white);
+}
+
+.row.body {
+  padding: 0.5em 2.5em 1em;
+}
+#contact{
+  background-color: aliceblue;
+}
+.pull-right {
+  float: right;
+}
+
+h1 {
+  font-family: 'Lato', sans-serif;
+  display: inline-block;
+  /* font-weight: 100; */
+  /* font-size: pxtoem(45, 16); */
+  font-size: 2rem;
+  border-bottom: 1px solid hsla(100%, 100%, 100%, 0.3);
+  margin: 0 0 0.1em 0;
+  padding: 0 0 0.4em 0;
+}
+
+h3 {
+  font-family: 'Lato', sans-serif;
+  font-size: pxtoem(20, 16);
+  margin: 1em 0 0.4em 0;
+}
+
+form {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  margin: 0 0 0.25em 0;
+  clear: both;
+  display: inline-block;
+  width: 100%;
+}
+
+li:last-child {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+
+p.right {
+  float: right;
+}
+
+.divider {
+  margin: 0.5em 0 0.5em 0;
+  border: 0;
+  height: 1px;
+  width: 100%;
+  display: block;
+  background-color: var(--blue);
+  background-image: linear-gradient(to right, var(--pink), var(--blue));
+}
+
+.req {
+  color: var(--pink);
+}
+
+label {
+  display: block;
+  margin: 0 0 0.5em 0;
+  color: var(--blue);
+  font-size: pxtoem(16, 16);
+}
+.field{
+  padding: 6px 10px 6px 10px;
+  border-radius: 8px;
+}
+input,
+textarea {
+  margin: 0 0 0.5em 0;
+  border: 1px solid var(--grey);
+  /* padding: 6px 10px 6px 10px; */
+  color: var(--dark_grey);
+  font-size: pxtoem(16, 16);
+  box-shadow: 1px 2px 3px rgb(8, 8, 8);
+}
+
+input.btn {
+  margin: 1.5em 0 0.5em;
+}
+
+small {
+  color: var(--blue);
+  margin-left: 0.5em;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 480px) {
+  .pull-right {
+    float: none;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  label {
+    width: 100%;
+    display: inline-block;
+    /* float: left; */
+    clear: both;
+  }
+  li,
+  p {
+    width: 100%;
+  }
+
+  input.btn {
+    margin: 1.5em 0 0.5em;
+  }
+
+  h1 {
+    font-size: pxtoem(36, 16);
+  }
+
+  h3 {
+    font-size: pxtoem(18, 16);
+  }
+
+  li small {
+    display: none;
+  }
+}
+.footer{
+  position: relative;
+  width: 100%;
+  background-color: #3586ff;
+  min-height: 100px;
+  padding:20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .social_icon{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 10px 0px; */
+  /* flex-wrap: wrap; */
+}
+.socail_icon li{
+  list-style: none;
+}
+
+.social_icon li .item{
+  font-size: 2.5em;
+  color: #fff;
+  margin: 0 20px;
+  display: inline-block;
+  transition:0.5s;
+}
+
+.social_icon li
+.exception{
+  font-size: 2.5em;
+  color: #fff;
+  margin: 0 20px 5px 20px;
+  display: inline-block;
+  transition:0.5s;
+}
+.social_icon li
+.exception:hover{
+  transform: translateY(-10px);
+}
+.social_icon li .item:hover{
+  transform: translateY(-10px);
+}
+.footer .wave{
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url(../assets/wave.png);
+  background-size:1000px 100px;
+}
+#wave1{
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWave 8s linear infinite;
+}
+#wave2{
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animateWave_02 8s linear infinite;
+}
+#wave3{
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWave 6s linear infinite;
+}
+#wave4{
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animateWave_02 6s linear infinite;
+}
+.footer-navbar{
+  display: flex;
+  color: #fff;
+  font-size: larger;
+  font-weight: bold;
+  align-items: center;
+  margin-top: 3rem;
+}
+.footer-navbar div{
+  margin-left: 1rem;
+}
+
+.footer-navbar div:hover{
+  transform: translateY(-5px);
+  font-weight: bolder;
+  transition: all 0.3s;
+}
+
+@keyframes animateWave{
+  0%{
+    background-position-x: 1000px;
+  }
+  100%{
+    background-position-x: 0px;
+  }
+}
+
+@keyframes animateWave_02{
+  0%{
+    background-position-x: 0px;
+  }
+  100%{
+    background-position-x: 1000px;
+  }
+}
+
+@media  screen and (max-width:600px) {
+  .container1{
+    width: 300px;
+  }
+  
+}

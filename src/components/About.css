@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Be Vietnam Pro", sans-serif;
+}
+
+.wrapper1 {
+    position: relative;
+    display: flex;
+    padding: 5rem;
+    margin: 10rem auto 4rem auto;
+    gap: 30px;
+    width: 80vw;
+    height: 100vh;
+}
+
+.intro-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 80%;
+    gap: 3rem;
+    justify-content: center;
+}
+#about{
+    background-color: aliceblue;
+}
+.blob-style {
+    position: absolute;
+    top: 40%;
+    left: 75%;
+    z-index: -5;
+    transform: translate(-50%, -50%);
+    animation: blobAnimate 5s linear infinite;
+}
+
+@keyframes blobAnimate {
+    50% {
+        top: 56%;
+        left: 70%;
+    }
+}
+
+.skills-logo {
+    width: 6rem;
+    transition: all 0.5s;
+}
+
+.skills-logo:hover {
+    transform: scale(1.2);
+}
+
+.intro-heading {
+    font-size: 3rem;
+    font-style: bold;
+    color: #4e45d5;
+    font-weight: 800;
+    line-height: 50px;
+    margin-bottom: 20px;
+}
+.second-para{
+    margin-top: 2rem;
+}
+.caps{
+    font-size: 6rem;
+}
+.into_text{
+    margin-top: 1rem;
+    width: 85%;
+    text-align: justify;
+}
+.into_text p{
+    margin: 15px 0;
+}
+@media  screen and (max-width:1100px) {
+    .wrapper1{
+        flex-direction: column;
+        height: auto;
+        width: auto;
+        justify-content: center;
+        align-items: center;
+        gap: 0px;
+        margin: 4rem 1rem;
+        padding: 1rem;
+    }
+    .skills-container{
+        padding-top: 4rem;
+        width: 60%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    
+    .blob-style{
+        display: none;
+    }
+    .skills-logo{
+        width: 4rem;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .wrapper1{
+        flex-direction: column;
+        height: auto;
+        width: auto;
+        /* justify-content: center; */
+        gap: 0px;
+        margin: 10rem 1rem;
+        padding: 1rem;
+    }
+    .intro-container{
+        width:100%;
+    }
+    .skills-container{
+        padding-top: 4rem;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    .blob-style{
+        display: none;
+    }
+    .skills-logo{
+        width: 4rem;
+    }
+  
+}
